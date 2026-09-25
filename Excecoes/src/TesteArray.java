@@ -5,9 +5,14 @@ public class TesteArray {
 		
 		System.out.println("Iniciando o loop...");
 		
-		//Vamos forçar um loop que tenta acessar o indice 3 (que não exste!)
-		for(int i=0; i <= 3; i++) {
-			System.out.println("Valor: " + nums[i]);
+		try {
+			//colocando o código arriscado aqui dentro!
+			for(int i = 0; i <= 3; i++) {
+				System.out.println("Valor: " + nums[i]);
+			}
+		} catch(Exception ex) {
+			//Se der erro, o fluxo pula para cá!
+			System.out.println("Ops! Tentamos acessar uma posição inválida no array.");
 		}
 		
 		System.out.println("Fim do programa!"); //Será que o programa chega aqui?
